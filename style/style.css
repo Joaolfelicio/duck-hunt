@@ -1,0 +1,125 @@
+@font-face {
+    font-family: duckHunt;
+    src: url("../assets/duckhunt.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    cursor: crosshair;
+    font-family: duckHunt;
+    font-weight: normal;
+
+}
+
+main {
+    height: 60vh;
+    background-color: #7EC0EE;
+    position: relative;
+    overflow: hidden;
+    background-image: url("../assets/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#duck {
+    height: 55px;
+    width: 75px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    background-image: url("../assets/duck.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #8C6B00;
+    height: 40vh;
+}
+
+.player {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    border: 3px solid black;
+    height: 50px;
+    padding: 15px;
+    background-color: #000;
+    color: white;
+    border-radius: 8px
+}
+
+h2 {
+    margin-right: 20px;
+    font-size: 32px;
+}
+
+p {
+    font-size: 32px;
+}
+
+.dead {
+    animation-name: deadDuckFalling;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+
+.duckEscaping {
+    animation-name: duckEscaping;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+
+.fa-undo {
+    font-size: 48px;
+    color: rgb(233, 93, 93);
+}
+
+#round-div {
+    border: 3px solid #84D310
+}
+
+@keyframes deadDuckFalling {
+    to {
+        top: 110%;
+    }
+}
+
+@keyframes duckEscaping {
+    to {
+        top: -20%;
+        left: 120%;
+    }
+}
+
+#winner-box {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+    width: 400px;
+    height: 80%;
+    z-index: 3;
+    background-color: #000;
+    color: white;
+    padding: 10px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+div h1 {
+    text-align: center;
+}
