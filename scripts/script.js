@@ -1,5 +1,19 @@
-const keyboardPlayer = prompt("Please insert the name of the keyboard player.");
-        const mousePlayer = prompt("Please insert the name of the mouse player.");
+        let keyboardPlayer = prompt("Please insert the name of the keyboard player.");
+        let mousePlayer = prompt("Please insert the name of the mouse player.");
+
+        if(!keyboardPlayer) {
+            keyboardPlayer = 'KeyboardPlayer'
+        } else {
+            document.querySelector("#keyboardPlayer").textContent = keyboardPlayer;
+        }
+
+        
+        if(!mousePlayer) {
+            mousePlayer = 'MousePlayer'
+        } else {
+            document.querySelector("#mousePlayer").textContent = mousePlayer;
+        }
+
         let keyboardPoints = document.querySelector("#keyboardPointsDOM");
         let mousePoints = document.querySelector("#mousePointsDOM");
         let roundNum = document.querySelector("#round");
@@ -9,8 +23,6 @@ const keyboardPlayer = prompt("Please insert the name of the keyboard player.");
         const keyboardBox = document.querySelector("#playerBoxKeyboard");
         const mouseBox = document.querySelector("#playerBoxMouse");
         const duck = document.querySelector("#duck");
-        document.querySelector("#keyboardPlayer").textContent = keyboardPlayer;
-        document.querySelector("#mousePlayer").textContent = mousePlayer;
         let keyboardPointsCounter = 0;
         let mousePointsCounter = 0;
         let lineY;
